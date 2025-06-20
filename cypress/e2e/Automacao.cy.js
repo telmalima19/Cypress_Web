@@ -50,7 +50,7 @@ it('Selecionar produtos', () => {
     cy.get('#file-upload').as('fileInput').attachFile('imagem.jpg')
   })
 
-  it('Enviar cadastro',()=>{
+  it('Enviar cadastro sucesso',()=>{
     cy.visit('../src/index.html')
     cy.Campos()
     cy.get('#phone-checkbox').check()
