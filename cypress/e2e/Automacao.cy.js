@@ -1,15 +1,13 @@
+const texto="dsfkerhtiuerhituretiiertuebtihieruhti eiruterthuierhtuiheriutheuirht"
 describe('Cypress e Github Actions', () => {
-  it('passes', () => {
+  it('Validar titulo', () => {
     cy.visit('../src/index.html')
     cy.title().should('eq','Curso de Cypress + Github Actions')
   })
 
 it('Preencher campos', () => {
-    cy.visit('../src/index.html')
-    cy.get('#Name').type('telma')
-    cy.get('#Job').type('Analista de teste/ QA')
-    cy.get('#email').type('qa@teste.com')
-    cy.get('#phone').type('819999999')
+  cy.Campos()
+
   })
 it('Selecionar produtos', () => {
     cy.visit('../src/index.html')
@@ -35,13 +33,28 @@ it('Selecionar produtos', () => {
     cy.get('#email-checkbox').check()
     cy.get('#email-checkbox').uncheck()
     })
-    it('Preenche a caixa de Texto',()=>{
+    it('Preenche a caixa de texto',()=>{
     cy.visit('../src/index.html')
     cy.get('#text-area').type('Telma QA')
   })
-    it('Anexa um Arquivo',()=>{
+      it('Preenche a caixa de texto com texto longo',()=>{
+    cy.visit('../src/index.html')
+    cy.get('#text-area').type(texto)
+  })
+    it('Anexa um Arquivo de texto',()=>{
     cy.visit('../src/index.html')
     cy.get('#file-upload').as('fileInput').attachFile('arquivo.txt')
   })
+      it('Anexa imagem',()=>{
+    cy.visit('../src/index.html')
+    cy.get('#file-upload').as('fileInput').attachFile('imagem.jpg')
+  })
 
+  it('Enviar cadastro',()=>{
+    cy.visit('../src/index.html')
+    cy.Campos()
+    cy.get('#phone-checkbox').check()
+    cy.get('#text-area').type('Teste QA')
+    cy.contains("button",'Enviar').click()
+  })
 })
