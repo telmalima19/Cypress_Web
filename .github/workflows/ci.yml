@@ -1,4 +1,4 @@
-name: Teste QA
+name: Curso Github Actions + Cypress
 
 on:
   push:
