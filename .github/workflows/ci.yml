@@ -29,3 +29,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: npm start
+<<<<<<< HEAD
+=======
+
+>>>>>>> fddcd8aab522b14c0f132e9a4dc590bd1e763ad9
