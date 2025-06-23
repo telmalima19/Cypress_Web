@@ -28,8 +28,5 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with:
-<<<<<<< HEAD
           start: npm start
-=======
-          start: npm start
->>>>>>> 73715675436bcff638bfbb9763ab81e4c1e86756
+
