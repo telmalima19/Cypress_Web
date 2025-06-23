@@ -16,5 +16,8 @@
     "url": "https://github.com/telmalima19/Cypress_Web/issues"
   },
   "homepage": "https://github.com/telmalima19/Cypress_Web#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.5.0"
+  }
 }
