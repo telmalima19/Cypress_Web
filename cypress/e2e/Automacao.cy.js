@@ -5,7 +5,7 @@ describe('Cypress e Github Actions', () => {
     cy.title().should('eq','Curso de Cypress + Github Actions')
   })
 
-it('Preencher campos', () => {
+it('Preencher campos.', () => {
   cy.Campos()
 
   })
